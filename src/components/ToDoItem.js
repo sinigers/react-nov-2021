@@ -1,10 +1,19 @@
-
+import { useEffect } from "react";
 
 export default function ToDoItem({
-    text
+    id,
+    text,
+    onDelete
 }) {
-    
+    useEffect(() => {
+        console.log(`${id} - Mounted`);
+        return () =>{
+
+        }
+    }, []);
+
     return (
-       <li>{text}</li>
+       <li>{text} <button onClick={() => onDelete(id)}>x</button> </li>
+    //    <li>{text} <button onClick={onDelete}>x</button> </li>
     );
 };
