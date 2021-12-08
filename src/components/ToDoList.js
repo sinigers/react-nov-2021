@@ -1,4 +1,4 @@
-
+import ToDoItem from "./ToDoItem";
 
 export default function ToDoList() {
     const todos = [
@@ -9,7 +9,7 @@ export default function ToDoList() {
     
     return (
         <ul>
-            {todos.map(todo => <li key={todo.id}>{todo.text}</li>)}
+            {todos.map(todo => <ToDoItem key={todo.id} todo={todo} />)}
         </ul>
     );
 };
