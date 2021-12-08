@@ -1,10 +1,10 @@
 
 
 export default function ToDoItem({
-    todo
+    text
 }) {
     
     return (
-       <li>{todo.text}</li>
+       <li>{text}</li>
     );
 };
